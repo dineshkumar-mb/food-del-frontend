@@ -79,7 +79,14 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
+    parcel_icon,
+    logo,
+    add_icon,
+    order_icon,
+    profile_image,
+    upload_area,
     parcel_icon
+
 }
 
 export const menu_list = [
@@ -348,3 +355,12 @@ export const food_list = [
         category: "Noodles"
     }
 ]
+import add_icon from './add_icon.png'
+import order_icon from './order_icon.png'
+import profile_image from './profile_image.png'
+import upload_area from './upload_area.png'
+
+
+    
+
+export const url = 'http://localhost:4000'

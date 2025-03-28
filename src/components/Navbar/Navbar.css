@@ -132,3 +132,15 @@ padding: 8px 25px;
    }
    
 }
+.navbar-admin{
+   display: flex;
+   justify-content: space-between;
+align-items: center;
+padding: 8px 4%;
+}
+.navbar .logo-admin{
+   width: max(10% ,80px);
+}
+.navbar .profile-admin{
+   width: 40px;
+}

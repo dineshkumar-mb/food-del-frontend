@@ -46,9 +46,9 @@ const App = () => {
           <Route path='/myorders' element={<MyOrders />} />
 
           {/* Admin Routes */}
-          <Route path='/admin/add' element={<Add url={url} />} />
-          <Route path='/admin/list' element={<List url={url} />} />
-          <Route path='/admin/order' element={<Order url={url} />} />
+          <Route path='/add' element={<Add url={url} />} />
+          <Route path='/list' element={<List url={url} />} />
+          <Route path='/order' element={<Order url={url} />} />
         </Routes>
       </div>
 

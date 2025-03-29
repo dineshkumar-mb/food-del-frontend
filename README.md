@@ -1,6 +1,7 @@
 🍔 Food Delivery App (MERN Stack)
 📌 Overview
 This is a Food Delivery App built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to browse food-items, add food items to their cart, place orders, and track deliveries.
+![Screenshot 2025-03-30 021516](https://github.com/user-attachments/assets/b36c6549-14ae-4361-96d5-9c96a3839081)
 
 🚀 Features
 🔹 User Features

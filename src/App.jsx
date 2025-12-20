@@ -22,7 +22,7 @@ import Order from './pages/Order/Order';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const location = useLocation();
-  const url = "http://localhost:4000";  
+  const url = "https://food-j0ie.onrender.com";
 
   // Check if the current route is part of the admin panel
   const isAdmin = location.pathname.includes('/admin');
@@ -36,7 +36,7 @@ const App = () => {
 
       <div className={isAdmin ? 'admin-container' : 'app'}>
         {isAdmin && <Sidebar />}
-        
+
         <Routes>
           {/* User Routes */}
           <Route path='/' element={<Home />} />

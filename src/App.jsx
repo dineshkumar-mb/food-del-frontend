@@ -22,7 +22,8 @@ import Order from './pages/Order/Order';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const location = useLocation();
-  const url = "https://food-j0ie.onrender.com";
+  // const url = "https://food-j0ie.onrender.com";
+  const url = "https://fooddelbackend-red.vercel.app";
 
   // Check if the current route is part of the admin panel
   const isAdmin = location.pathname.includes('/admin');

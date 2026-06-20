@@ -7,8 +7,13 @@ const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
     // const url = "https://food-j0ie.onrender.com";
+    // Use the deployed URL for all API requests (Login, Register, Orders, etc.)
     const url = "https://fooddelbackend-red.vercel.app";
-    const [token, setToken] = useState("")
+
+    // Use localhost specifically for loading images so they aren't broken on your PC
+    const localUrl = "http://localhost:4000";
+    const [token, setToken] = useState("");
+    const [userName, setUserName] = useState("");
     const [food_list, setFood_list] = useState([]);
 
 
@@ -61,6 +66,9 @@ const StoreContextProvider = (props) => {
             await fetchFoodList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
+                if (localStorage.getItem("userName")) {
+                    setUserName(localStorage.getItem("userName"));
+                }
                 await loadCartData(localStorage.getItem("token"))
             }
         }
@@ -74,8 +82,11 @@ const StoreContextProvider = (props) => {
         removeFromCart,
         getTotalCartAmount,
         url,
+        localUrl,
         token,
-        setToken
+        setToken,
+        userName,
+        setUserName
     }
 
 

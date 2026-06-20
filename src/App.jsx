@@ -22,8 +22,10 @@ import Order from './pages/Order/Order';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const location = useLocation();
-  // const url = "https://food-j0ie.onrender.com";
+  // Use deployed URL for APIs
   const url = "https://fooddelbackend-red.vercel.app";
+  // Use local URL for Images
+  const localUrl = "http://localhost:4000";
 
   // Check if the current route is part of the admin panel
   const isAdmin = location.pathname.includes('/admin');

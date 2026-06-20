@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext';
 import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
-    const { url, setToken } = useContext(StoreContext);  // ✅ Fixed naming issue
+    const { url, setToken, setUserName } = useContext(StoreContext);  // ✅ Fixed naming issue
 
     const [currState, setCurrState] = useState("Sign Up");
     const [data, setData] = useState({
@@ -42,6 +42,10 @@ const LoginPopup = ({ setShowLogin }) => {
             if (response.data.success) {
                 setToken(response.data.token);  // ✅ setToken now exists
                 localStorage.setItem("token", response.data.token);
+                if (response.data.name) {
+                    setUserName(response.data.name);
+                    localStorage.setItem("userName", response.data.name);
+                }
                 setShowLogin(false);
             } else {
                 alert(response.data.message);

@@ -33,9 +33,10 @@ const App = () => {
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       <ToastContainer />
 
-      <Navbar setShowLogin={setShowLogin} isAdmin={isAdmin} />
+      {isAdmin && <Navbar setShowLogin={setShowLogin} isAdmin={isAdmin} />}
 
       <div className={isAdmin ? 'admin-container' : 'app'}>
+        {!isAdmin && <Navbar setShowLogin={setShowLogin} isAdmin={isAdmin} />}
         {isAdmin && <Sidebar />}
 
         <Routes>
